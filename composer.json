@@ -1,0 +1,46 @@
+{
+  "name": "kaisar/wallet-transfer",
+  "type": "library",
+  "description": "Experimental wallet transfer for PHP",
+  "license": "MIT",
+  "homepage": "https://github.com/ravenkaisar/wallet-transfer",
+  "keywords": [
+    "cli",
+    "wallet-transfer"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Kaisar\\WalletTransfer\\": "src/"
+    },
+    "files": ["src/functions.php"]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Kaisar\\WalletTransfer\\Tests\\": "tests/"
+    }
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev",
+  "optimize-autoloader": true,
+  "require": {
+    "php": ">=8.1",
+    "ext-readline": "*"
+  },
+  "require-dev": {
+    "pestphp/pest": "^1.22",
+    "friendsofphp/php-cs-fixer": "^3.5"
+  },
+  "scripts": {
+    "test": [
+      "pest"
+    ],
+    "csfix": [
+      "php-cs-fixer fix"
+    ]
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
